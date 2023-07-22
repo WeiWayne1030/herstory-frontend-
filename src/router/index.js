@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router';
 
 import { useAuthStore, useAlertStore } from '@/stores';
 import { Home } from '@/views';
+import { helloWorld } from '@/views';
 import accountRoutes from './account.routes';
 import usersRoutes from './users.routes';
 
@@ -10,6 +11,7 @@ export const router = createRouter({
     linkActiveClass: 'active',
     routes: [
         { path: '/', component: Home },
+        { path: '/helloWorld', component: helloWorld},
         { ...accountRoutes },
         { ...usersRoutes },
         // catch all redirect to home page
